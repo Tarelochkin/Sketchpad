@@ -8,7 +8,6 @@ $(document).ready(function() {
 });
 
 function drawGrid() {
-  $(".wrapper").width($("#field").height() + 20);
   for (var i = 0; i < Math.pow(res,2); i++) {
     $('#field').append('<div></div>');
   }
