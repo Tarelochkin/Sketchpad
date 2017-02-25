@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tarelochkin's Sketchpad</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div id="hint">
+      <ol>
+        <li>Place the cursor inside the pad and click the LMB to start drawing. By clicking again you will disable the drawing function which will allow you to move the cursor inside the pad without applying the color. Click once again to enable the "brush".</li>
+        <li>By double-clicking you will randomly select a color of your "brush".</li>
+        <li>By using the pallete above the pad you can assign a specific color either to the "brush" or the pad itself (by choosing a color and clicking the "Set As Background Button").</li>
+      </ol>
+    </div>
+    <div id="controls">
+      <div id="palette">
+        <div style="background:black" class="chosen"></div>
+        <div style="background:silver"></div>
+        <div style="background:gray"></div>
+        <div style="background:white"></div>
+        <div style="background:maroon"></div>
+        <div style="background:red"></div>
+        <div style="background:purple"></div>
+        <div style="background:fuchsia"></div>
+        <div style="background:green"></div>
+        <div style="background:lime"></div>
+        <div style="background:olive"></div>
+        <div style="background:yellow"></div>
+        <div style="background:navy"></div>
+        <div style="background:blue"></div>
+        <div style="background:teal"></div>
+        <div style="background:aqua"></div>
+        <a href="#" onclick="changeBg(); return false">Set As Background</a>
+      </div>
+
+      <div id="resolution">
+        <table width="144">
+          <tr>
+            <td height="40">Opacity:</td>
+            <td><select id="opacity" onchange="changeOp()">
+              <option value="1">100%</option>
+              <option value="2">90%</option>
+              <option value="3">80%</option>
+              <option value="4">70%</option>
+              <option value="5">60%</option>
+              <option value="6">50%</option>
+              <option value="7">40%</option>
+              <option value="8">30%</option>
+              <option value="9">20%</option>
+              <option value="10">10%</option>
+            </select></td>
+          </tr>
+          <tr><td>Resolution: </td><td width="1"><a href="#" onclick="changeRes(); return false">48x48</a></td></tr>
+        </table>
+      </div>
+
+      <div id="erase">
+        <a href="#" onclick="toggleHint(); return false" id="togHint"><span>Show</span><span style="display:none;">Hide</span> Hint</a>
+        <a href="#" onclick="clearSlate(); return false">Clear</a>
+      </div>
+    </div>
+
+    <div id="field"></div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/sketch.js"></script>
+</body>
+</html>

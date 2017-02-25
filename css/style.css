@@ -1,0 +1,90 @@
+html, body {
+  height: 100%;
+}
+body {
+  background: url(../images/sketch-bg.gif);
+  background-size: cover;
+}
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+}
+#controls {
+  padding-top: 5px;
+  height: 75px;
+  overflow: hidden;
+  font: bold 13px/28px arial,sans-serif;
+}
+#controls a {
+  display: inline-block;
+  width: 100%;
+  border-radius: 2px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  background: #4285f4;
+  background: -webkit-linear-gradient(top,#4387fd,#4683ea);
+  background: linear-gradient(top,#4387fd,#4683ea);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4387fd,endColorstr=#4683ea,GradientType=0)
+}
+#controls a:hover {
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.15);
+  box-shadow: 0 1px 0 rgba(0,0,0,.15)
+}
+#palette {
+  float: left;
+  width: 144px;
+}
+#palette > div {
+  width: 16px;
+  height: 16px;
+  margin: 1px;
+  float: left;
+}
+#palette > div.chosen {
+  border: 1px solid #ffc107;
+  margin: 0;
+}
+#palette > a {
+  margin-top: 5px;
+}
+#resolution {
+  float: right;
+}
+#resolution table td {
+  vertical-align: middle;
+}
+#erase {
+  margin: 3px auto 0 auto;
+  width: 100px;
+}
+#togHint {
+  margin-bottom: 10px;
+}
+#field {
+  height: calc(100% - 110px);
+  border: 10px solid #ffc107;
+  overflow: hidden;
+  background: #fff;
+}
+#field > div {
+  float: left;
+}
+#hint {
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  height: calc(100% - 110px);
+  background: #ccc;
+  display: none;
+  font: 16px/22px arial,sans-serif;
+  background: #fff;
+  padding: 0 50px;
+}
+#hint ol {
+  list-style: decimal;
+}
+#hint li {
+  margin: 15px 0;
+}
